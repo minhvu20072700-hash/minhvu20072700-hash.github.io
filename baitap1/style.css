@@ -1,0 +1,72 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(gray,blue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.registration-form{
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px black;
+    width: 100%;
+    max-width: 450px;
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+}
+.registration-form h2{
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: rgb(44, 39, 39);
+}
+.minh-vu{
+   display: flex; 
+   flex-direction: column;
+   gap: 8px;
+}
+label{
+   font-weight: 600; 
+   color: rgb(62, 55, 55);
+}
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    padding: 12px;
+    border: 1px solid rgb(197, 197, 255);
+    border-radius: 12px;
+    font-size: 14px;
+}
+input:focus {
+    outline: none;
+    border-color: #1ce2e2;
+    box-shadow: 0 0 0 2px #0c6ac8;
+}
+button{
+    background-color: red;
+    color: yellow; 
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.1s;
+    padding: 12px;
+}
+button:hover{
+    background-color: green
+}
+small {
+    color: #606770;
+    font-size: 12px;
+}
+#strength-indicator {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 4px;
+}

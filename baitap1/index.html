@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="registration-form" id="registerForm">
+    <h2>Đăng Ký</h2>
+    
+    <div class="minh-vu">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="5" maxlength="15" placeholder="Nhập tên người dùng...">
+        <small>Yêu cầu từ 5 đến 15 ký tự</small>
+    </div>
+
+    <div class="minh-vu">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu">
+        <small> Phải chưa cả chữ và số</small>
+        <div id="strength-indicator">Độ mạnh:chưa nhập</div>
+    </div>
+
+    <div class="minh-vu">
+        <label for="profilePic">Profile picture</label>
+        <input type="file" id="profilePic" name="profilePic picture" required accept=".jPG,.PNG,.jpeg">
+        <small>Chỉ nhập file ảnh PNG va JPG</small>
+    </div>
+    <button type="submit">Xác Nhận</button>
+    </form>
+</body>
+</html>
