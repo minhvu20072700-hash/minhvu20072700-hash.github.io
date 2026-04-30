@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .header-course {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #8B0000; /* Màu đỏ đô */
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #a0a0a0;
+            margin: 20px 0;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .form-group.align-top {
+            align-items: flex-start;
+        }
+
+        /* Định dạng chung cho nhãn (Label) */
+        .label {
+            width: 150px;
+            color: #2e5b8e; /* Màu xanh biển đậm */
+            flex-shrink: 0;
+        }
+
+        /* Định dạng chung cho ô nhập (Input) */
+        input[type="text"], 
+        input[type="password"] {
+            border: 1px solid #999;
+            padding: 4px;
+            width: 250px;
+        }
+
+        /* Các kích thước ô nhập đặc biệt */
+        .input-small { width: 50px !important; }
+        .input-medium { width: 100px !important; }
+        .input-half { width: 130px !important; }
+
+        select {
+            padding: 4px;
+            border: 1px solid #999;
+        }
+
+        .helper-text {
+            color: #2e5b8e;
+            margin-left: 5px;
+        }
+
+        /* Căn chỉnh riêng cho dòng First Name / Last Name */
+        .name-row .label-last {
+            color: #2e5b8e;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+
+        /* Bố cục lưới cho phần Sở thích (Interests) */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: 200px 250px;
+            row-gap: 8px;
+            column-gap: 10px;
+        }
+
+        .interest-item {
+            display: flex;
+            align-items: center;
+            color: #2e5b8e;
+            cursor: pointer;
+        }
+
+        .interest-item input {
+            margin-right: 8px;
+            margin-top: 0;
+        }
+
+        /* Định dạng nút đăng ký */
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-register {
+            background: linear-gradient(to bottom, #bd1b1b, #7a0000);
+            border: 2px solid #5a0000;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 40px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+
+        .btn-register:hover {
+            background: linear-gradient(to bottom, #d62020, #8f0000);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-course">
+    </div>
+
+    <h2>REGISTRATION</h2>
+    <hr>
+
+    <form action="#" method="POST">
+        <!-- Thông tin tài khoản -->
+        <div class="form-group">
+            <div class="label">Username:</div>
+            <input type="text" name="username">
+        </div>
+        <div class="form-group">
+            <div class="label">Password:</div>
+            <input type="password" name="password">
+        </div>
+        <div class="form-group">
+            <div class="label">Re-type<br>Password:</div>
+            <input type="password" name="retype_password">
+        </div>
+
+        <hr>
+
+        <!-- Thông tin Ngày sinh và Ảnh -->
+        <div class="form-group">
+            <div class="label">Birthday:</div>
+            <div>
+                <select name="month">
+                    <option value="">[select one]</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <!-- Bạn có thể thêm các tháng còn lại -->
+                </select> ,
+                <input type="text" class="input-small" name="day"> ,
+                <input type="text" class="input-medium" name="year">
+                <span class="helper-text">(Month Day, Year)</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="label">Images:</div>
+            <input type="file" name="image">
+        </div>
+
+        <hr>
+
+        <!-- Họ và Tên -->
+        <div class="form-group name-row">
+            <div class="label">First Name:</div>
+            <input type="text" class="input-half" name="firstname">
+            <div class="label-last">Last Name:</div>
+            <input type="text" class="input-half" name="lastname">
+        </div>
+
+        <hr>
+
+        <!-- Sở thích -->
+        <div class="form-group align-top">
+            <div class="label">Interests (optional):</div>
+            <div class="interests-grid">
+                <label class="interest-item"><input type="checkbox" name="interest" value="Entertainment"> Entertainment</label>
+                <label class="interest-item"><input type="checkbox" name="interest" value="Business"> Business</label>
+                <label class="interest-item"><input type="checkbox" name="interest" value="Home & Family"> Home & Family</label>
+                <label class="interest-item"><input type="checkbox" name="interest" value="Computers & Technology"> Computers & Technology</label>
+                <label class="interest-item"><input type="checkbox" name="interest" value="Health"> Health</label>
+                <label class="interest-item"><input type="checkbox" name="interest" value="Personal Finance"> Personal Finance</label>
+                <label class="interest-item"><input type="checkbox" name="interest" value="Music"> Music</label>
+                <label class="interest-item"><input type="checkbox" name="interest" value="Small Business"> Small Business</label>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Nút Gửi -->
+        <div class="button-container">
+            <button type="submit" class="btn-register">REGISTER</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
